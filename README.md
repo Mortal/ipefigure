@@ -37,3 +37,8 @@ To avoid extra horizontal space in the LaTeX layout (which will turn into "overf
 
 Don't use `width=\textwidth` or similar in LaTeX! Instead, measure up how much space in the document you have, and then size your Ipe figure accordingly.
 This allows you to use the same font size in the figure as you have in the rest of the document.
+
+To measure up a space precisely, add `\showthe\linewidth` at the place where the figure will be inserted.
+This causes a TeX error at this point with the error message being the size of `\linewidth` at this point.
+
+`\showthe` works really well in the default errorstopmode, but if you use TeX in nonstopmode or batchmode, then you need to search through the error log to find the measurement.
