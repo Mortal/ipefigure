@@ -1,0 +1,19 @@
+\documentclass[a4paper,12pt]{memoir}
+% memoir.cls declares the 12pt option as:
+% \DeclareOption{12pt}{\renewcommand*{\@ptsize}{2}\renewcommand*{\@memptsize}{12}}
+\usepackage{graphicx}
+\usepackage{libertine}
+\begin{document}
+\begin{figure}%
+  \noindent
+  \begin{minipage}{0.5\textwidth}%
+    \includegraphics[page=1]{myfigure.pdf}%
+  \end{minipage}%
+  \begin{minipage}{0.5\textwidth}%
+    %\showthe\linewidth  % 170.5pt
+    \includegraphics[page=2]{myfigure.pdf}%
+  \end{minipage}%
+  \par
+  \caption{Amazing figure! wow!}
+\end{figure}
+\end{document}
